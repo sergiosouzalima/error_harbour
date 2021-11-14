@@ -1,0 +1,22 @@
+#
+# $Id: error_test.hbp
+#
+# How to compile:
+# hbmk2 error_test.hbp
+#
+
+-w2
+-gc3
+-oerror_test
+{linux}-ldl
+-lpthread
+
+../../hbexpect/lib/hbexpect.prg
+../error_class.prg
+error_test.prg
+
+# Special parameters for LINUX/GTK
+{linux}-lm
+{linux}-static
+{linux}-d__LINUX__
+{linux}-d__GTK__
